@@ -1,0 +1,77 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>Colour Stacking</title>
+	<style>
+	h1{
+	text-align: center;
+	}
+	.red {
+	position: absolute;
+	left: 10%; top: 10%;
+	z-index: 0;
+	}
+	.yellow {
+	position: absolute;
+	left: 30%; top: 30%;
+	z-index: 1;
+	}
+	.green {
+	position: absolute;
+	left: 50%; top: 50%;
+	z-index: 2;
+	}
+	.red:hover{
+	transform :scale(1.10);
+	}
+	.yellow:hover{
+	transform:scale(1.10);
+	}
+	.green:hover{
+	transform:scale(1.10);
+	}
+	figure{
+	display:table;
+	}
+	figcaption{
+	display:table-caption;
+	caption-side:bottom;
+	font-weight: bold;
+	}
+	</style>
+	<script>
+	var topIndex = 2;
+	function moveToTop(picture) {
+	picture.style.zIndex = ++topIndex;
+	}
+	</script>
+	</head>
+	<body>
+	<h1>Overlapping Images By Shishira</h1>
+	<div id="image-container">
+	<div id="red" class="red" onmouseover="moveToTop(this)">
+	<figure>
+	<img src="wimbledon-trophy.jpg" width="400" height="300">
+
+	<figcaption><em>Wimbledon is held annually in London.It is known for its grass courts.It was first held in 1877.</em></figcaption>
+	</figure> 
+	</div>
+	<div id="yellow" class="yellow" onmouseover="moveToTop(this)">
+	<figure>
+	<img src="rg_1.jpg" width="400" height="300">
+
+	<figcaption><em>Roland Garros is held annually in Paris.It is known for its clay courts.It began in 1968.</em></figcaption>
+	</figure>
+	</div>
+	<div id="green" class="green" onmouseover="moveToTop(this)">
+	<figure>
+	<img src="AO-trophies-700x450.jpg" width="400" height="300">
+
+	<figcaption><em>The Australian Open is held annually in Melbourne.It is known for its hard courts.It was first held in 1905.</em></figcaption>
+	</figure>
+	</div>
+	</div>
+	</body>
+	</html>
+
